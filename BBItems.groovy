@@ -4,7 +4,32 @@ import net.minecraft.init.MobEffects
 import net.minecraft.potion.PotionEffect
 import net.minecraft.potion.Potion
 import net.minecraft.item.Item
-
 import static Util.createItem
 
-createItem("crystal meth", EnumRarity.EPIC, 64)
+//drugs
+
+String [] drugs = [
+    "crystalmeth"
+]
+
+Potion [] potions = [
+    MobEffects.STRENGTH,
+    MobEffects.NAUSEA,
+    MobEffects.SPEED,
+    MobEffects.HASTE
+]
+
+int heal = 44
+float saturation = 8.6F
+int potionDuration = 1200
+int potionAmplifier = 0
+
+for (String drugName : drugs) {
+
+    Item drug = new ItemDrug(0, 0, content.getDefaultTab()).setRarity(EnumRarity.EPIC)
+
+    for (Potion potion : potions)
+        drug.addPotionEffect(potion, 1200, 5)
+
+    content.registerItem(drugName, drug)
+}

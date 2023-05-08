@@ -6,7 +6,14 @@ import net.minecraft.potion.Potion
 import net.minecraft.item.Item
 import static Util.createItem
 
-//drugs
+// items
+
+createItem("emptysyringe")
+createItem("methsyringe")
+createItem("plunger")
+createItem("needle")
+
+// drugs
 
 String [] drugs = [
     "crystalmeth"
@@ -23,8 +30,9 @@ for (String drugName : drugs) {
 
     Item drug = new ItemDrug(0, 0, content.getDefaultTab()).setRarity(EnumRarity.EPIC)
 
-    for (Potion potion : potions)
+    for (Potion potion : potions) {
         drug.addPotionEffect(potion, 1200, 5)
+    }
 
     content.registerItem(drugName, drug)
 }

@@ -4,7 +4,7 @@ import net.minecraft.block.Block
 import net.minecraft.item.ItemStack
 import net.minecraftforge.common.IRarity
 
-class NomiUtil {
+class Util {
 
     /* Items */
     static void createItem(String name){

@@ -1,0 +1,21 @@
+{
+  "packName": "Nomifactory",
+  "packId": "contenttweaker",
+  "version": "1.0.0",
+  "debug": false,
+  "classes": [
+    "classes/Util.groovy",
+    "classes/"
+  ],
+  "loaders": {
+    "preInit": [
+      "classes/",
+      "preInit/BBMaterials.groovy",
+      "preInit/BBItems.groovy",
+      "preInit/"
+    ],
+    "postInit": [
+      "postInit/BBRecipes.groovy"
+    ]
+  }
+}

@@ -19,11 +19,6 @@ Potion [] potions = [
     MobEffects.HASTE
 ]
 
-int heal = 44
-float saturation = 8.6F
-int potionDuration = 1200
-int potionAmplifier = 0
-
 for (String drugName : drugs) {
 
     Item drug = new ItemDrug(0, 0, content.getDefaultTab()).setRarity(EnumRarity.EPIC)

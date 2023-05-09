@@ -73,5 +73,13 @@
             .EUt(120)           
             .buildAndRegister()         
                      
-                     
-                     
+   crafting.shapedBuilder()
+            .name('empty_syringe')
+            .output(item('nomifactory:empty_syringe'))
+            .matrix('  N',
+                    ' R ',
+                    'P. ')
+            .key('N', item('nomifactory:needle'))
+            .key('R', metaitem('rodIron'))
+            .key('P', item('nomifactory:plunger'))
+            .register()        

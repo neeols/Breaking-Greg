@@ -1,3 +1,6 @@
+   import gregtech.api.metatileentity.multiblock.CleanroomType
+
+
     mods.gregtech.large_chemical_reactor.recipeBuilder() // Chloroacetone
         .inputs(metaitem('dustAluminiumTrichloride') * 15)
         .inputs(fluid('chlorine') * 10000, fluid('acetone') * 10000)
@@ -49,7 +52,8 @@
     mods.gregtech.chemical_reactor.recipeBuilder()
             .inputs(metaitem('dustLithiumHydride'))
             .inputs(liquid('methylamine') * 1000, liquid('phenylacetone') * 500)   
-            .fluidOutputs(liquid('methamphetamine') * 1000)    
+            .fluidOutputs(liquid('methamphetamine') * 1000)
+            .cleanroom(CleanroomType.CLEANROOM)
             .duration(200)    
             .EUt(8192)    
             .buildAndRegister()  

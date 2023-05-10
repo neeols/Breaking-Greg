@@ -8,10 +8,10 @@ import static Util.createItem
 
 // items
 
-content.createItem("emptysyringe").register()
-content.createItem("methsyringe").register()
-content.createItem("plunger").register()
-content.createItem("needle").register()
+createItem("emptysyringe")
+createItem("methsyringe")
+createItem("plunger")
+createItem("needle")
 
 // drugs
 

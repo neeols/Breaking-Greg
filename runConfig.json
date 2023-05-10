@@ -1,11 +1,11 @@
 {
-  "packName": "Nomifactory GTCEU",
+  "packName": "Nomifactory",
   "packId": "nomifactory",
   "version": "1.0.0",
   "debug": false,
   "classes": [
     "classes/Util.groovy",
-    "classes/"
+    "classes/items/ItemDrug.groovy"
   ],
   "loaders": {
     "preInit": [

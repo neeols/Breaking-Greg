@@ -68,18 +68,18 @@
                 
     mods.gregtech.forge_hammer.recipeBuilder()
             .inputs(metaitem('plateMethamphetamine')
-            .outputs(item('contenttweaker:emptysyringe')    
+            .outputs(item('contenttweaker:crystalmeth')    
             .duration(10)
             .EUt(120)           
             .buildAndRegister()         
                      
    crafting.shapedBuilder()
             .name('empty_syringe')
-            .output(item('nomifactory:empty_syringe'))
+            .output(item('contenttweaker:emptysyringe'))
             .matrix('  N',
                     ' R ',
                     'P. ')
-            .key('N', item('nomifactory:needle'))
+            .key('N', item('contenttweaker:needle'))
             .key('R', metaitem('rodIron'))
-            .key('P', item('nomifactory:plunger'))
+            .key('P', item('contenttweaker:plunger'))
             .register()        

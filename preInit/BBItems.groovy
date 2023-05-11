@@ -9,14 +9,14 @@ import static Util.createItem
 // items
 
 createItem("emptysyringe")
-createItem("methsyringe")
 createItem("plunger")
 createItem("needle")
 
 // drugs
 
 String [] drugs = [
-    "crystalmeth"
+    "crystalmeth",
+    "methsyringe"
 ]
 
 Potion [] potions = [
@@ -30,8 +30,20 @@ for (String drugName : drugs) {
 
     Item drug = new ItemDrug(0, 0, content.getDefaultTab()).setRarity(EnumRarity.EPIC)
 
-    for (Potion potion : potions) {
-        drug.addPotionEffect(potion, 1200, 5)
+    switch(drugName) {
+        case "crystalmeth":
+            for (Potion potion : potions) {
+                 drug.addPotionEffect(potion, 1200, 5)
+            }
+            drug.setSyringe(false)
+        break
+
+        case "methsyringe":
+            for (Potion potion : potions) {
+                 drug.addPotionEffect(potion, 1200, 20)
+            }
+            drug.setSyringe(true)
+        break
     }
 
     content.registerItem(drugName, drug)

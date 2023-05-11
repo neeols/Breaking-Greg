@@ -7,6 +7,7 @@ ebf = recipemap('electric_blast_furnace')
 chemical_reactor = recipemap('chemical_reactor')
 fluid_solidifier = recipemap('fluid_solidifier')
 forge_hammer = recipemap('forge_hammer')
+canner = recipemap('canner')
 
    lcr.recipeBuilder() // Chloroacetone
             .inputs(metaitem('dustAluminiumTrichloride') * 15)
@@ -57,7 +58,7 @@ forge_hammer = recipemap('forge_hammer')
             .buildAndRegister()
 
     chemical_reactor.recipeBuilder()
-            .inputs(metaitem('dustLithiumHydride') * 2)
+            .inputs(metaitem('dustLithiumAluminiumHydride') * 2)
             .fluidInputs(fluid('methylamine') * 2000, fluid('phenylacetone') * 1000)
             .fluidOutputs(fluid('methamphetamine') * 2000)
             .cleanroom(CleanroomType.CLEANROOM)
@@ -67,23 +68,34 @@ forge_hammer = recipemap('forge_hammer')
 
     fluid_solidifier.recipeBuilder()
             .fluidInputs(fluid('methamphetamine') * 1000)
-            .notConsumable(metaitem('shape.mold.plate'))
-            .outputs(metaitem('plateMethamphetamine'))
+            .notConsumable(item('gregtech:meta_item_1', 12))
+            .outputs(item('gregtech:meta_plate', 20001))
             .duration(10)
             .EUt(120)
             .buildAndRegister()
 
     forge_hammer.recipeBuilder()
-            .inputs(metaitem('plateMethamphetamine'))
+            .inputs(item('gregtech:meta_plate', 20001))
             .outputs(item('nomifactory:crystalmeth'))
             .duration(10)
             .EUt(120)
             .buildAndRegister()
 
-   crafting.addShaped('syringe', item('nomifactory:emptysyringe'),
-        [
-          [null, null, item('nomifactory:needle')],
-          [null, metaitem('stickIron'), null],
-          [item('nomifactory:plunger'), null, null]
-        ]
-    )
+    canner.recipeBuilder()
+            .inputs(item('nomifactory:emptysyringe'))
+            .fluidInputs(fluid('methamphetamine') * 1000)
+            .outputs(item('nomifactory:methsyringe'))
+            .duration(10)
+            .EUt(120)
+            .buildAndRegister()
+
+    crafting.shapedBuilder()
+        .name('syringe')
+        .output(item('nomifactory:emptysyringe'))
+        .matrix('  C',
+                ' B ',
+                'A  ')
+        .key('A', item('nomifactory:plunger'))
+        .key('B', metaitem('component.glass.tube'))
+        .key('C', item('nomifactory:needle'))
+        .register()

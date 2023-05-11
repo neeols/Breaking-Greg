@@ -84,6 +84,6 @@ forge_hammer = recipemap('forge_hammer')
         [
           [null, null, item('nomifactory:needle')],
           [null, metaitem('rodIron'), null],
-          [item('nomifactory:plunger'), null, null)]
+          [item('nomifactory:plunger'), null, null]
         ]
     )

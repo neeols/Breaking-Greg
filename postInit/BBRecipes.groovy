@@ -8,7 +8,7 @@ forge_hammer = recipemap('forge_hammer')
 
    lcr.recipeBuilder() // Chloroacetone
             .inputs(metaitem('dustAluminiumTrichloride') * 15)
-            .inputs(fluid('chlorine') * 10000, fluid('acetone') * 10000)
+            .fluidInputs(fluid('chlorine') * 10000, fluid('acetone') * 10000)
             .fluidOutputs(fluid('chloroacetone') * 10000)
             .duration(200) // 10 seconds
             .EUt(2048) // EV recipe
@@ -16,15 +16,15 @@ forge_hammer = recipemap('forge_hammer')
 
    lcr.recipeBuilder() // phenylacetone
             .inputs(metaitem('dustAluminiumTrichloride') * 2)
-            .inputs(liquid('benzene') * 44000, liquid('chloroacetone') * 7000)
-            .fluidOutputs(liquid('phenylacetone') * 6000)
+            .fluidInputs(fluid('benzene') * 44000, fluid('chloroacetone') * 7000)
+            .fluidOutputs(fluid('phenylacetone') * 6000)
             .duration(200)
             .EUt(1048)
             .buildAndRegister();
 
     chemical_reactor.recipeBuilder() // lithium hydride
             .inputs(ore('dustLithium')
-            .inputs(liquid('hydrogen') * 1000)
+            .fluidInputs(fluid('hydrogen') * 1000)
             .outputs(metaitem('dustLithiumHydride'))
             .duration(200)
             .EUt(120)
@@ -32,7 +32,7 @@ forge_hammer = recipemap('forge_hammer')
 
     ebf.recipeBuilder() //ALuminium Trichloride
             .inputs(ore('dustAluminium') * 2)
-            .items(liquid('hydrochloric_acid') * 6000)
+            .fluidInputs(fluid('hydrochloric_acid') * 6000)
             .outputs(metaitem('dustAluminiumTrichloride') * 2)
             .duration(200)
             .EUt(120)
@@ -40,15 +40,15 @@ forge_hammer = recipemap('forge_hammer')
 
     chemical_reactor.recipeBuilder() //Lithium Aluminium Hydride
             .inputs(metaitem('dustLithiumHydride') * 4)
-            .inputs(liquid('aluminium_trichloride') * 1000)
+            .fluidInputs(fluid('aluminium_trichloride') * 1000)
             .outputs(metaitem('dustLithiumAluminiumHydride'), metaitem('dustLithiumChloride') * 3)
             .duration(200)
             .EUt(120)
             .buildAndRegister()
 
     chemical_reactor.recipeBuilder() // methylamine
-            .fluidInputs(liquid('methanol') * 2000, liquid('ammonia') * 2000)
-            .fluidOutputs(liquid('water') * 1000, liquid('methylamine') * 1000)
+            .fluidInputs(fluid('methanol') * 2000, fluid('ammonia') * 2000)
+            .fluidOutputs(fluid('water') * 1000, fluid('methylamine') * 1000)
             .circuitMeta(10)
             .duration(200)
             .EUt(120)
@@ -56,15 +56,15 @@ forge_hammer = recipemap('forge_hammer')
 
     chemical_reactor.recipeBuilder()
             .inputs(metaitem('dustLithiumHydride') * 2)
-            .inputs(liquid('methylamine') * 2000, liquid('phenylacetone') * 1000)
-            .fluidOutputs(liquid('methamphetamine') * 2000)
+            .fluidInputs(fluid('methylamine') * 2000, fluid('phenylacetone') * 1000)
+            .fluidOutputs(fluid('methamphetamine') * 2000)
             .cleanroom(CleanroomType.CLEANROOM)
             .duration(200)
             .EUt(8192)
             .buildAndRegister()
 
     fluid_solidifier.recipeBuilder()
-            .inputs(liquid('methamphetamine') * 1000)
+            .fluidInputs(fluid('methamphetamine') * 1000)
             .notConsumable(metaitem('shape.mold.plate'))
             .outputs(metaitem('plateMethamphetamine'))
             .duration(10)

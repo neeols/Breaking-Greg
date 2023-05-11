@@ -4,10 +4,10 @@
     mods.gregtech.large_chemical_reactor.recipeBuilder() // Chloroacetone
         .inputs(metaitem('dustAluminiumTrichloride') * 15)
         .inputs(fluid('chlorine') * 10000, fluid('acetone') * 10000)
-        .fluidOutputs(fluid('chloroacetone') * 20000)
-        .duration(200) // 10 secondssitll 
+        .fluidOutputs(fluid('chloroacetone') * 10000)
+        .duration(200) // 10 seconds
         .EUt(2048) // EV recipe
-     .buildAndRegister()
+        .buildAndRegister()
 
     mods.gregtech.large_chemical_reactor.recipeBuilder() // phenylacetone
         .inputs(metaitem('dustAluminiumTrichloride') * 2)
@@ -43,7 +43,7 @@
     
     mods.gregtech.chemical_reactor.recipeBuilder() // methylamine
             .fluidInputs(liquid('methanol') * 1000, liquid('ammonia') * 1000)
-            .fluidOutputs(liquid('water') * 1000, liquid('methylamine') * 1000)    
+            .fluidOutputs(liquid('water') * 500, liquid('methylamine') * 500)    
             .circuitMeta(10)    
             .duration(200)    
             .EUt(120)    

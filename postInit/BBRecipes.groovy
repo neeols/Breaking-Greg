@@ -1,4 +1,6 @@
 import gregtech.api.metatileentity.multiblock.CleanroomType
+import net.minecraft.item.ItemStack
+import net.minecraft.item.Item
 
 lcr = recipemap('large_chemical_reactor')
 ebf = recipemap('blast_furnace')

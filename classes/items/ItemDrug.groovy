@@ -1,6 +1,8 @@
+import net.minecraft.entity.player.InventoryPlayer
 import net.minecraft.creativetab.CreativeTabs
 import net.minecraft.entity.player.EntityPlayer
 import net.minecraft.item.ItemFood
+import net.minecraft.item.Item
 import net.minecraft.item.ItemStack
 import net.minecraft.potion.Potion
 import net.minecraft.potion.PotionEffect
@@ -10,6 +12,7 @@ import net.minecraftforge.common.IRarity
 public class ItemDrug extends ItemFood {
     List<PotionEffect> potionEffects
     private IRarity rarity = null
+    private boolean syringe
 
     public ItemDrug (int healAmount, float saturation, CreativeTabs creativeTab) {
         super(healAmount, saturation, true)
@@ -31,6 +34,11 @@ public class ItemDrug extends ItemFood {
         return this
     }
 
+    public ItemDrug setSyringe(boolean isSyringe) {
+        this.syringe = isSyringe
+        return this
+    }
+
     @Override
     protected void onFoodEaten(ItemStack stack, World worldIn, EntityPlayer player)
     {
@@ -39,6 +47,10 @@ public class ItemDrug extends ItemFood {
             for (PotionEffect potionAdd : potionEffects) {
                 if (potionAdd != null)
                     player.addPotionEffect(new PotionEffect(potionAdd))
+            }
+
+            if (this.syringe) {
+                player.inventory.addItemStackToInventory(item('nomifactory:emptysyringe'))
             }
         }
     }

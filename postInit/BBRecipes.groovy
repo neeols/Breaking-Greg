@@ -48,8 +48,8 @@ forge_hammer = recipemap('forge_hammer')
 
     chemical_reactor.recipeBuilder() // methylamine
             .fluidInputs(fluid('methanol') * 2000, fluid('ammonia') * 2000)
-            .fluidOutputs(fluid('water') * 1000, fluid('methylamine') * 1000)
-            .circuitMeta(10)
+            .fluidOutputs(fluid('water') * 2000, fluid('methylamine') * 2000)
+            .circuitMeta(4)
             .duration(200)
             .EUt(120)
             .buildAndRegister()

@@ -6,7 +6,7 @@ chemical_reactor = recipemap('chemical_reactor')
 fluid_solidifier = recipemap('fluid_solidifier')
 forge_hammer = recipemap('forge_hammer')
 
-    lcr.recipeBuilder() // Chloroacetone
+   lcr.recipeBuilder() // Chloroacetone
             .inputs(metaitem('dustAluminiumTrichloride') * 15)
             .inputs(fluid('chlorine') * 10000, fluid('acetone') * 10000)
             .fluidOutputs(fluid('chloroacetone') * 10000)
@@ -78,13 +78,8 @@ forge_hammer = recipemap('forge_hammer')
             .EUt(120)
             .buildAndRegister()
 
-   crafting.shapedBuilder()
-            .name('empty_syringe')
-            .output(item('nomifactory:emptysyringe'))
-            .matrix('  N',
-                    ' R ',
-                    'P. ')
-            .key('N', item('nomifactory:needle'))
-            .key('R', metaitem('rodIron'))
-            .key('P', item('nomifactory:plunger'))
-            .register()
+   crafting.addShaped('syringe', item('nomifactory:emptysyringe'), [
+        [null, null, item('nomifactory:needle')],
+        [null, metaitem('rodIron'), null],
+        [item('nomifactory:plunger'), null, null)]
+        ])

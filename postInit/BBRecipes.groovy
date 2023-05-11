@@ -3,7 +3,7 @@ import net.minecraft.item.ItemStack
 import net.minecraft.item.Item
 
 lcr = recipemap('large_chemical_reactor')
-ebf = recipemap('blast_furnace')
+ebf = recipemap('electric_blast_furnace')
 chemical_reactor = recipemap('chemical_reactor')
 fluid_solidifier = recipemap('fluid_solidifier')
 forge_hammer = recipemap('forge_hammer')

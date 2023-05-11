@@ -25,7 +25,7 @@ forge_hammer = recipemap('forge_hammer')
             .buildAndRegister()
 
     chemical_reactor.recipeBuilder() // lithium hydride
-            .inputs(ore('dustLithium')
+            .inputs(ore('dustLithium'))
             .fluidInputs(fluid('hydrogen') * 1000)
             .outputs(metaitem('dustLithiumHydride'))
             .duration(200)

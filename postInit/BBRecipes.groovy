@@ -78,8 +78,10 @@ forge_hammer = recipemap('forge_hammer')
             .EUt(120)
             .buildAndRegister()
 
-   crafting.addShaped('syringe', item('nomifactory:emptysyringe'), [
-        [null, null, item('nomifactory:needle')],
-        [null, metaitem('rodIron'), null],
-        [item('nomifactory:plunger'), null, null)]
-        ])
+   crafting.addShaped('syringe', item('nomifactory:emptysyringe'),
+        [
+          [null, null, item('nomifactory:needle')],
+          [null, metaitem('rodIron'), null],
+          [item('nomifactory:plunger'), null, null)]
+        ]
+    )

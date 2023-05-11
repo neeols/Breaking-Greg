@@ -42,17 +42,17 @@
             .buildAndRegister()
     
     mods.gregtech.chemical_reactor.recipeBuilder() // methylamine
-            .fluidInputs(liquid('methanol') * 1000, liquid('ammonia') * 1000)
-            .fluidOutputs(liquid('water') * 500, liquid('methylamine') * 500)    
+            .fluidInputs(liquid('methanol') * 2000, liquid('ammonia') * 2000)
+            .fluidOutputs(liquid('water') * 1000, liquid('methylamine') * 1000)    
             .circuitMeta(10)    
             .duration(200)    
             .EUt(120)    
             .buildAndRegister()    
                 
     mods.gregtech.chemical_reactor.recipeBuilder()
-            .inputs(metaitem('dustLithiumHydride'))
-            .inputs(liquid('methylamine') * 1000, liquid('phenylacetone') * 500)   
-            .fluidOutputs(liquid('methamphetamine') * 1000)
+            .inputs(metaitem('dustLithiumHydride') * 2)
+            .inputs(liquid('methylamine') * 2000, liquid('phenylacetone') * 1000)   
+            .fluidOutputs(liquid('methamphetamine') * 2000)
             .cleanroom(CleanroomType.CLEANROOM)
             .duration(200)    
             .EUt(8192)    

@@ -20,7 +20,7 @@ forge_hammer = recipemap('forge_hammer')
             .fluidOutputs(fluid('phenylacetone') * 6000)
             .duration(200)
             .EUt(1048)
-            .buildAndRegister();
+            .buildAndRegister()
 
     chemical_reactor.recipeBuilder() // lithium hydride
             .inputs(ore('dustLithium')

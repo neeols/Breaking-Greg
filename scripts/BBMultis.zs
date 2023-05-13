@@ -19,57 +19,57 @@ val dealer = Builder.start("dealer", 25000)
     .withPattern(function(controller as IControllerTile) as IBlockPattern {
         return FactoryBlockPattern.start()
             .aisle(
-                "ABBBA",
+                "AFFFA",
                 "CDDDC",
                 "CDDDC",
                 "CDDDC",
-                "AFFFA"
+                "ABBBA"
             )
             .aisle(
-                "ADDDA",
+                "FDDDF",
                 "D---D",
                 "D---D",
                 "D---D",
-                "FDDDF"
+                "BDDDB"
             )
             .aisle(
-                "ADDDA",
+                "FDDDF",
                 "D---D",
                 "G-H-G",
                 "D---D",
-                "FDDDF"
+                "BDDDB"
             )
             .aisle(
-                "ADDDA",
+                "FDDDF",
                 "D---D",
                 "G-H-G",
                 "D---D",
-                "FDDDF"
+                "BDDDB"
             )
             .aisle(
-                "ADDDA",
+                "FDDDF",
                 "D---D",
                 "D---D",
                 "D---D",
-                "FDDDF"
+                "BDDDB"
             )
             .aisle(
-                "ABBBA",
+                "AFFFA",
                 "CDDDC",
                 "CDSDC",
                 "CDDDC",
-                "AFFFA"
+                "ABBBA"
             )
             .where('S', controller.self())
             .where('A', <metastate:gregtech:meta_block_compressed_188:14>) // incoloy block
             .where('B', <metastate:gregtech:meta_block_frame_18:15>) // bismuth bronze frame
             .where('C', <metastate:actuallyadditions:block_misc:9>) // aluminium casing
             .where('-', CTPredicate.getAny())
-            .where('D', <metastate:nomifactory:bronzebismuthcasing>) // bronze bismuth casing
             .where('F', <metastate:gregtech:meta_block_frame_188:14>) // incoloy frame
             .where('G', <metastate:appliedenergistics2:quartz_vibrant_glass>) // vibrant quartz glass
             .where('H', <metastate:nomifactory:compressedmethblock>) // double compressed meth
-            | controller.autoAbilities(true, false, true, true, false, false, false)
+            .where('D', CTPredicate.states(<metastate:nomifactory:bronzebismuthcasing>)
+            | controller.autoAbilities(true, false, true, true, false, false, false))
             .build();
 
     } as IPatternBuilderFunction)
@@ -102,12 +102,12 @@ dealer.recipeMap.recipeBuilder()
     .duration(2)
     .EUt(32768)
     .inputs(<nomifactory:crystalmeth> * 64)
-    .outputs(<contenttweaker:omnicoin100> * 16)
+    .outputs(<contenttweaker:omnicoin100> * 8)
     .buildAndRegister();
 
 dealer.recipeMap.recipeBuilder()
     .duration(2)
     .EUt(32768)
     .inputs(<nomifactory:methsyringe> * 16)
-    .outputs(<contenttweaker:omnicoin100> * 32)
+    .outputs(<contenttweaker:omnicoin100> * 4)
     .buildAndRegister();

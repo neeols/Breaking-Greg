@@ -5,12 +5,21 @@ import net.minecraft.potion.PotionEffect
 import net.minecraft.potion.Potion
 import net.minecraft.item.Item
 import static Util.createItem
+import static Util.createBlock
 
 // items
 
 createItem("emptysyringe")
 createItem("plunger")
 createItem("needle")
+createItem("pvcglove")
+createItem("shapeglove")
+
+// blocks
+
+createBlock("bronzebismuthcasing")
+createBlock("methblock")
+createBlock("compressedmethblock")
 
 // drugs
 

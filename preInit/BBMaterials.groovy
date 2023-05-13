@@ -1,3 +1,4 @@
+import gregtech.api.GregTechAPI.PostMaterialEvent
 import gregtech.api.GregTechAPI.MaterialEvent
 import gregtech.api.unification.material.Material
 import gregtech.api.unification.Elements
@@ -60,4 +61,9 @@ event_manager.listen { MaterialEvent event ->
         .color(0xffffff)
         .components(material('lithium') * 1, material('chlorine') * 1)
         .build()
+}
+
+ event_manager.listen { PostMaterialEvent event ->
+    def bismuth_bronze = material('bismuth_bronze')
+    bismuth_bronze.addFlags("generate_frame")
 }

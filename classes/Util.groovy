@@ -31,6 +31,10 @@ class Util {
             .register()
     }
 
+    static void createBlock(String name){
+        content.createBlock(name).register()
+    }
+
     /* Blocks */
     static Block createBaseBlock(Material material, SoundType soundType){
         return new Block(material)

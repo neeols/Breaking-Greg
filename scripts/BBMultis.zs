@@ -102,12 +102,12 @@ dealer.recipeMap.recipeBuilder()
     .duration(2)
     .EUt(32768)
     .inputs(<nomifactory:crystalmeth> * 64)
-    .outputs(<contenttweaker:omnicoin100> * 16)
+    .outputs(<contenttweaker:omnicoin100> * 8)
     .buildAndRegister();
 
 dealer.recipeMap.recipeBuilder()
     .duration(2)
     .EUt(32768)
     .inputs(<nomifactory:methsyringe> * 16)
-    .outputs(<contenttweaker:omnicoin100> * 32)
+    .outputs(<contenttweaker:omnicoin100> * 4)
     .buildAndRegister();

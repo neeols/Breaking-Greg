@@ -14,12 +14,22 @@ createItem("plunger")
 createItem("needle")
 createItem("pvcglove")
 createItem("shapeglove")
+createItem("montmorillonite_clay")
 
 // blocks
 
-createBlock("bronzebismuthcasing")
+createBlock("casing0")
+createBlock("casing1")
+createBlock("casing2")
+createBlock("casing3")
+createBlock("casing4")
+createBlock("casing5")
+createBlock("casing6")
+createBlock("casing7")
 createBlock("methblock")
 createBlock("compressedmethblock")
+
+// crops
 
 // drugs
 

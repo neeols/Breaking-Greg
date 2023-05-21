@@ -115,7 +115,7 @@ assembler = recipemap('assembler')
 
     assembler.recipeBuilder()
             .inputs(metaitem('plateBismuthBronze') * 6, metaitem('frameBismuthBronze'))
-            .outputs(item('nomifactory:bronzebismuthcasing'))
+            .outputs(item('nomifactory:casing0'))
             .circuitMeta(6)
             .duration(10)
             .EUt(120)
@@ -134,7 +134,7 @@ assembler = recipemap('assembler')
 
     crafting.shapedBuilder()
         .name('bismuthcasing')
-        .output(item('nomifactory:bronzebismuthcasing'))
+        .output(item('nomifactory:casing0'))
         .matrix('PHP',
                 'PFP',
                 'PWP')

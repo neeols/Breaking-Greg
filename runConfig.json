@@ -1,0 +1,19 @@
+{
+  "packName": "Age of Ingenuity",
+  "packId": "modpack",
+  "version": "1.0.0",
+  "debug": false,
+  "classes": ["classes/Util.groovy", "classes/items/ItemDrug.groovy"],
+  "loaders": {
+    "preInit": [
+      "classes/",
+      "preInit/"
+    ],
+    "init": [
+      "init/"
+    ],
+    "postInit": [
+      "postInit/"
+    ]
+  }
+}

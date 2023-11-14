@@ -15,8 +15,6 @@ createItem("needle")
 createItem("pvcglove")
 createItem("shapeglove")
 
-createItem("cokeclaymixture")
-
 // blocks
 
 createBlock("bronzebismuthcasing")

@@ -5,18 +5,29 @@ import net.minecraft.potion.PotionEffect
 import net.minecraft.potion.Potion
 import net.minecraft.item.Item
 import static Util.createItem
+import static Util.createBlock
+
+def creativeTab = content.createCreativeTab("modpack.breaking_greg", item("minecraft:sand"))
 
 // items
 
 createItem("emptysyringe")
-createItem("methsyringe")
 createItem("plunger")
 createItem("needle")
+createItem("pvcglove")
+createItem("shapeglove")
+
+// blocks
+
+createBlock("bronzebismuthcasing")
+createBlock("methblock")
+createBlock("compressedmethblock")
 
 // drugs
 
 String [] drugs = [
-    "crystalmeth"
+    "crystalmeth",
+    "methsyringe"
 ]
 
 Potion [] potions = [
@@ -28,10 +39,22 @@ Potion [] potions = [
 
 for (String drugName : drugs) {
 
-    Item drug = new ItemDrug(0, 0, content.getDefaultTab()).setRarity(EnumRarity.EPIC)
+    Item drug = new ItemDrug(0, 0, creativeTab).setRarity(EnumRarity.EPIC)
 
-    for (Potion potion : potions) {
-        drug.addPotionEffect(potion, 1200, 5)
+    switch(drugName) {
+        case "crystalmeth":
+            for (Potion potion : potions) {
+                 drug.addPotionEffect(potion, 1200, 4)
+            }
+            drug.setSyringe(false)
+        break
+
+        case "methsyringe":
+            for (Potion potion : potions) {
+                 drug.addPotionEffect(potion, 1200, 5)
+            }
+            drug.setSyringe(true)
+        break
     }
 
     content.registerItem(drugName, drug)

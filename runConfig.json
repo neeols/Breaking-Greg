@@ -1,21 +1,27 @@
 {
-  "packName": "Breaking Bad",
-  "packId": "contenttweaker",
+  "packName": "Breaking Greg",
+  "packId": "modpack",
   "version": "1.0.0",
   "debug": false,
-  "classes": [
-    "classes/Util.groovy",
-    "classes/"
-  ],
+  "classes": {
+    "preInit": [
+      "classes/preInit/",
+      "classes/Util.groovy", 
+      "classes/items/ItemDrug.groovy"
+    ],
+    "init": [
+      "classes/init/"
+    ]
+  },
   "loaders": {
     "preInit": [
-      "classes/",
-      "preInit/BBMaterials.groovy",
-      "preInit/BBItems.groovy",
       "preInit/"
     ],
+    "init": [
+      "init/"
+    ],
     "postInit": [
-      "postInit/BBRecipes.groovy"
+      "postInit/"
     ]
   }
 }

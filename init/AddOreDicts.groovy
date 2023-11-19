@@ -1,0 +1,1 @@
+oreDict.add("cropRedgrape", item('harvestcraft:grapeitem'))

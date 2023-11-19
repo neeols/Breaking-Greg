@@ -50,7 +50,7 @@ public class ItemDrug extends ItemFood {
             }
 
             if (this.syringe) {
-                player.inventory.addItemStackToInventory(item('nomifactory:emptysyringe'))
+                player.inventory.addItemStackToInventory(item('modpack:emptysyringe'))
             }
         }
     }
